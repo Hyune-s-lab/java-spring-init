@@ -1,10 +1,14 @@
 version: "3"
 services:
-  test_database:
+  test_db:
     container_name: mysql8.0.30
     image: mysql:8.0.30
     environment:
-      MYSQL_DATABASE: testDB
+      MYSQL_DATABASE: root
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
+  java-spring-init:
+    image: java-spring-init
+    ports:
+      - "8080:8080"
