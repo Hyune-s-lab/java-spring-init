@@ -8,12 +8,12 @@
 - MySQL 8.0.30 with docker compose
 
 ```shell
-> docker compose up -d
-[+] Running 1/1
- ⠿ test_database Pulled                                                                                                                                                                                                                 2.6s
-[+] Running 2/2
- ⠿ Network java-spring-init_default  Created                                                                                                                                                                                            0.0s
- ⠿ Container mysql8.0.30             Started
+> ./run.sh
+> docker ps 
+CONTAINER ID   IMAGE              COMMAND                  CREATED         STATUS         PORTS                               NAMES
+e911fb32a2ef   java-spring-init   "java -jar /app.jar"     5 minutes ago   Up 2 seconds   0.0.0.0:8080->8080/tcp              java-spring-init-java-spring-init-1
+96557fa4df03   mysql:8.0.30       "docker-entrypoint.s…"   5 minutes ago   Up 2 seconds   0.0.0.0:3306->3306/tcp, 33060/tcp   mysql8.0.30
+
 ```
 
 ## Feature
